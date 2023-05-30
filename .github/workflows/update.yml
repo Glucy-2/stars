@@ -1,9 +1,10 @@
 name: 'Update by stargazed'
 # This workflow runs at 00:30 everyday
 on:
+  push:
+    branches: ["main"]
   schedule:
-    -
-      cron: '30 0 * * *'
+    - cron: '30 0 * * *'
 jobs:
   build:
     name: 'stargazed update'
